@@ -3,7 +3,7 @@
 list = [12, 45, 67, 89, 99, 100]  # sorted list
 
 # numbner to search
-number = 100
+number = 67
 
 
 def search(list, n):
@@ -19,13 +19,13 @@ def search(list, n):
             low = mid + 1
         else:
             high = mid - 1
-    return -1
+    return False
 
 
 search_result = search(list, number)
-if search_result != -1:
+if search_result != False:
     print('Element found at : ', search_result)
-elif search_result == -1:
+elif not search_result:
     print("Element NOT Found")
 else:
     print("Error")
